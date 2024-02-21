@@ -1,2 +1,4 @@
-package Lecture12Tests;public class TomMathematicalOperation {
+package Lecture12Tests;
+
+public class TomMathematicalOperation {
 }

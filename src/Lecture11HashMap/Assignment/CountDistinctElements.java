@@ -1,4 +1,4 @@
-package Lecture11HashMap;
+package Lecture11HashMap.Assignment;
 
 import java.util.ArrayList;
 import java.util.HashMap;

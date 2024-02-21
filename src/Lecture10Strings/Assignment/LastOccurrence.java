@@ -2,7 +2,7 @@ package Lecture10Strings.Assignment;
 
 import java.util.Scanner;
 
-public class FirstOccurrence {
+public class LastOccurrence {
     public static int solve(final String A, final int B) {
         for (int i = (A.length() - 1) ; i >= 0 ; i--) {
             if (A.charAt(i) == B) {
