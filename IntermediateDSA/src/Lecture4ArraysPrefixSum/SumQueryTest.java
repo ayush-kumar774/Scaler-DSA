@@ -1,5 +1,7 @@
 package Lecture4ArraysPrefixSum;
 
+// In Range Always Think to use prefix sum
+
 // Given an array representing profit or loss from a stock over
 // a period of days, write a function that calculates the total profit or
 // loss for a given range of days.
@@ -51,6 +53,15 @@ public class SumQueryTest {
         //-5
         //-120
         //90
+
+        int[] A4 = {2, 3, 1, 6, 4, 5};
+        int[][] Q4 = {
+                {1, 3},
+                {2, 5},
+                {0, 4},
+                {3, 3}
+        };
+        printEvenIndexSum(A4, Q4);
     }
 
     private static void printQuerySum(int[] A, int[][] Q) {
@@ -63,6 +74,74 @@ public class SumQueryTest {
             }
             System.out.println(sum);
         }
+    }
+
+    private static long[] cumulativeSumEvenIndex(int[] array) {
+        long[] cumulativeSum = new long[array.length];
+        cumulativeSum[0] = array[0];
+        for (int i = 1 ; i < array.length; i++) {
+            if (i % 2 == 0) {
+                cumulativeSum[i] = cumulativeSum[i - 1] + array[i];
+            }
+            else {
+                cumulativeSum[i] = cumulativeSum[i - 1];
+            }
+        }
+        return cumulativeSum;
+    }
+
+    private static long[] cumulativeSumOddIndex(int[] array) {
+        long[] cumulativeSum = new long[array.length];
+        cumulativeSum[0] = 0;
+        for (int i = 1 ; i < array.length; i++) {
+            if (i % 2 == 1) {
+                cumulativeSum[i] = cumulativeSum[i - 1] + array[i];
+            }
+            else {
+                cumulativeSum[i] = cumulativeSum[i - 1];
+            }
+        }
+        return cumulativeSum;
+    }
+
+    private static void printEvenIndexSum(int[] array, int[][]queries) {
+        if (array == null || array.length == 0) {
+            System.out.println("Array is null");
+            return;
+        }
+        long [] cumulativeSum = cumulativeSumEvenIndex(array);
+
+        for (int[] query : queries) {
+            int start = query[0];
+            int end = query[1];
+            if (start == 0) {
+                System.out.println(cumulativeSum[end]);
+            }
+            else {
+                System.out.println(cumulativeSum[end] - cumulativeSum[start - 1]);
+            }
+        }
+    }
+
+    private static void printQueries(int[][] queries, long[] cumulativeSum) {
+         for (int[] query : queries) {
+            int start = query[0];
+            int end = query[1];
+            if (start == 0) {
+                System.out.println(cumulativeSum[end]);
+            }
+            else {
+                System.out.println(cumulativeSum[end] - cumulativeSum[start - 1]);
+            }
+        }
+    }
+    private static void printOddIndexSum(int[] array, int[][]queries) {
+        if (array == null || array.length == 0) {
+            System.out.println("Array is null");
+            return;
+        }
+        long [] cumulativeSum = cumulativeSumOddIndex(array);
+        printQueries(queries, cumulativeSum);
     }
 
     private static long[] returnQuerySum(int[] array, int[][] queries) {
