@@ -1,0 +1,13 @@
+What is the time complexity of the following code :
+
+int a = 0 ;
+for (int i = 0 ; i < N ; i++) {
+    for (int j = N ; j > i ; j--) {
+        a = a + i + j;
+    }
+}
+
+A. O(N)
+B. O(N * log(N))
+C. O(N * Sqrt(N))
+D. O(N * N) --> Right Answer
