@@ -1,0 +1,14 @@
+What is the complexity of the following code snippet ?
+{
+    int ans = 0 ;
+    for (int i = 0 ; i < n ; i++) {
+        ans += i * i ;
+    }
+    return ans;
+}
+
+A. O(n log n)
+B. O(n)  --> Right Answer
+C. O(n^2)
+D. O(1)
+E. None of the above

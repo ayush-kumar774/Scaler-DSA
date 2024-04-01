@@ -1,0 +1,14 @@
+What will be the time complexity of the above function where n is a positive integer?
+
+void function (int n) {
+    while (n > 0) {
+        n++ ;
+        n -= 2 ;
+    }
+}
+
+A. Infinite loop
+B. O(n)  --> Right Answer
+C. O(n * log n)
+D. O(log n)
+E. None of the above

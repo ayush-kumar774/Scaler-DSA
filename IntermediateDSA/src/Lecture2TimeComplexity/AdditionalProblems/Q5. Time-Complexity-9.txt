@@ -1,0 +1,5 @@
+If for an algorithm time complexity is given by O(log2n) then complexity will:
+A. constant
+B. polynomial
+C. exponential
+D. none of the mentioned --> Right Answer (Logarithms)

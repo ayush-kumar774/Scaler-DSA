@@ -1,0 +1,5 @@
+If an algorithm has a time complexity of O(1), then the complexity of it is?
+A. constant --> Right Answer
+B. polynomial
+C. exponential
+D. none of the mentioned

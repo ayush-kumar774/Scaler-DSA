@@ -1,0 +1,16 @@
+Find the total number of iterations in the following code snippet:
+
+NOTE: ^ denotes power, not Bitwise XOR.
+
+for (int i = 1; i <= n; i++)
+{
+    for (int j = 1; j <= 3 ^ i; j++)
+    {
+        print(i + j);
+    }
+}
+
+A. n^3 times.
+B. 3 + 9 + 27 + .... + 3^n times. --> Right Answer
+C. 3^n times.
+D. n * (3^n) times.
