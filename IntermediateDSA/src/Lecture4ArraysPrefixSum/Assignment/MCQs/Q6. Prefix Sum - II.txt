@@ -1,0 +1,7 @@
+Given the prefix sum of an array, prefSum = [-2, 4, 1, 5, 2]
+What is the sum of the original array from index 2 to 4(0-based)?
+
+A. 2
+B. 1
+C. -2 --> Right Answer
+D. 8
