@@ -1,2 +1,4 @@
-package Lecture2RefresherPracticeTest;public class CheckIfArrayIsSorted {
+package Lecture2RefresherPracticeTest;
+
+public class CheckIfArrayIsSorted {
 }

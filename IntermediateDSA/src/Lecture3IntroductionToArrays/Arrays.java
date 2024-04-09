@@ -24,6 +24,16 @@ public class Arrays {
         for (int element : arr) {
             System.out.print(element + " ");
         }
+        System.out.println();
+    }
+
+    public  static void print2DArrays(int[][] arr) {
+        for (int i = 0 ; i < arr.length ; i++) {
+            for (int j = 0 ; j < arr[i].length ; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     private static void func(int[] arr) {

@@ -1,2 +1,4 @@
-package Lecture2RefresherPracticeTest;public class ReverseGivenArray {
+package Lecture2RefresherPracticeTest;
+
+public class ReverseGivenArray {
 }
