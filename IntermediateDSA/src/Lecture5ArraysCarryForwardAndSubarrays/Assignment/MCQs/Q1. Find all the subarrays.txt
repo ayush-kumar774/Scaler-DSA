@@ -1,0 +1,9 @@
+Given A = [1, -2, 5, 2, -1, 6]. Choose all the valid subarrays of the array
+
+A. [5, 2, -1] --> Subarray
+
+B. [-2, -1, 6]
+
+C. [1, -2, 5, 2] --> Subarray
+
+D. [6] --> Subarray
