@@ -1,5 +1,7 @@
 package Lecture5ArraysCarryForwardAndSubarrays;
 
+import Lecture3IntroductionToArrays.Arrays;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,10 +111,7 @@ public class ArraysCarryForwardAndSubArrays {
 
     public static void print2DArray(int[][] arr) {
         for (int[] nums : arr) {
-            for (int num : nums) {
-                System.out.print(num + " ");
-            }
-            System.out.println(); // Move to the next line after printing all elements of a row
+            Arrays.printArray(nums); // Move to the next line after printing all elements of a row
         }
     }
 
