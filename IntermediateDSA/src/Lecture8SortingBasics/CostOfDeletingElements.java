@@ -6,13 +6,6 @@ import java.util.Arrays;
 
 public class CostOfDeletingElements {
 
-    public static int[] prefixSum(int[] A) {
-        if (A.length == 0) {
-            return null;
-        }
-        return InPlacePrefixSum.getPrefixSum(A);
-    }
-
     public static int costOfDeletingElement(int[] A) {
         Arrays.sort(A);
         int ans = 0 ;

@@ -1,0 +1,5 @@
+What happens to the 0-th bit in a when we perform a = a^1 ?
+A. It gets toggled --> Answer
+B. It gets unset
+C. It gets set
+D. It remains same

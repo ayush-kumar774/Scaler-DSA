@@ -1,0 +1,4 @@
+Given a=10, what will be the 0-th bit in a|1 ?
+A. 0
+B. 1 --> Answer
+C. Cannot be determined
