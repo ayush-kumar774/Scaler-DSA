@@ -1,0 +1,13 @@
+What is the time complexity of the following code snippet
+int func(int n){
+    int s = 0;
+    for(int i = 1 ; i <= 100 ; i++){
+        s = s + i;
+    }
+    return s;
+}
+
+A. O(n)
+B. O(n^2)
+C. O(s)
+D. O(1) --> Right Answer

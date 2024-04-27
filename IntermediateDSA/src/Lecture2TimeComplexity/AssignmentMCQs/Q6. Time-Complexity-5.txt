@@ -1,0 +1,12 @@
+What is the time complexity of following code:
+
+int a = 0, i = N;
+while (i > 0) {
+    a += i;
+    i /= 2;
+}
+
+A. O(N)
+B. O(Sqrt(N))
+C. O(N / 2)
+D. O(log N) --> Right Answer

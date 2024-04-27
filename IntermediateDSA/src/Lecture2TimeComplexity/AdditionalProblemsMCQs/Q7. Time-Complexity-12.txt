@@ -1,0 +1,5 @@
+If for an algorithm time complexity is given by O((3/2)^n) then complexity will:
+A. constant
+B. quadratic
+C. exponential --> Right Answer
+D. none of the mentioned

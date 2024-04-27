@@ -1,0 +1,5 @@
+Which of the following is a correct conversion of 76 (base 10) to binary?
+A. 1010000
+B. 1001010
+C. 1001100 --> Answer
+D. 1001110

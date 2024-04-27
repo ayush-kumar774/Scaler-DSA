@@ -1,0 +1,21 @@
+What is the time complexity of the following code snippet
+
+void solve(int N, int M){
+    for (int i = 1 ; i <= N ; i++) {
+
+        if(N % i == 0)
+
+        print(i);
+    }
+
+    for (int i = 1 ; i <= M ; i++) {
+        if(M % i == 0)
+
+        print(i);
+    }
+}
+
+A. O(N)
+B. O(M)
+C. O(N+M) --> Right Answer
+D. O(NM)

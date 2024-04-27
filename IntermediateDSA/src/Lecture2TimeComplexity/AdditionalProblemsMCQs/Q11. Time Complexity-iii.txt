@@ -1,0 +1,13 @@
+What is the time complexity of the following code snippet?
+
+for (int i = 0 ; i < n ; i++) {
+    for (int j = i - 1; j >= 0; j++) {
+        ans += i + j ;
+    }
+}
+
+A. O(n)
+B. O(n^2)
+C. Code will run indefinitely --> Right Answer
+D. O(1)
+E. None of the above

@@ -1,0 +1,5 @@
+Which of the following is the correct conversion of 10101101(base 2) to decimal?
+A. 175
+B. 173 --> Answer
+C. 171
+D. 169

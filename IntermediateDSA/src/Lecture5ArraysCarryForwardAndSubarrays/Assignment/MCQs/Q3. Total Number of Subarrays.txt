@@ -1,0 +1,5 @@
+Given an array of size 21, find the total number of subarrays of the array.
+A. 254
+B. 231 --> Right Answer
+C. 369
+D. 441

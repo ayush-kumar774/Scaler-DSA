@@ -1,0 +1,5 @@
+The sum of n natural numbers is :
+A. (n*(n+1))/2 --> Right Answer
+B. (n*(n-1))/2
+C. (n+1)/2
+D. (n*(n+1)*(2*n+1))/6

@@ -1,0 +1,6 @@
+What is the time complexity of creating the prefix sum array of an array A of N integers ?
+
+A. O(1)
+B. O(N) --> Right Answer
+C. O(N^2)
+D. O(N^3)

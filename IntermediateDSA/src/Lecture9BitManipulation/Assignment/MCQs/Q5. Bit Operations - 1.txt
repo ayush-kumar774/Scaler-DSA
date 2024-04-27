@@ -1,0 +1,4 @@
+If a&1 = 1, then a is?
+A. even
+B. odd --> Answer
+C. can be either odd or even

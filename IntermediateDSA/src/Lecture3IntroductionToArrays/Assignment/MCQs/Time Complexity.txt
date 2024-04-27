@@ -1,0 +1,5 @@
+What is the time complexity for inserting/deleting at the beginning of the array?
+A. O(1)
+B. O(N) --> Right Answer
+C. O(logN)
+D. O(N^2)

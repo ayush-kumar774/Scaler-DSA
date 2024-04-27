@@ -1,0 +1,5 @@
+If an algorithm has a time complexity of O(n), then the complexity of it is?
+A. constant
+B. linear --> Right Answer
+C. exponential
+D. none of the mentioned
