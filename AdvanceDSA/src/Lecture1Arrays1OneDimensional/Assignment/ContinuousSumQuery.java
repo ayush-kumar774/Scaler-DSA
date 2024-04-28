@@ -1,30 +1,7 @@
-package Lecture1Arrays1OneDimensional;
+package Lecture1Arrays1OneDimensional.Assignment;
 
-public class BeggarsOutsideATemple {
-    public static int[] finalBeggarState(int N, int Q, int[] S, int[] X) {
-        int [] ans = new int[N];
-        for (int i = 0 ; i < Q ; i++) {
-            int s = S[i];
-            int amount = X[i] ;
-            for (int j = s ; j < N ; j++) {
-                ans[j] += amount;
-            }
-        }
-        return ans;
-    }
-    public static int[] finalBeggarOptimized(int N , int Q, int[] S, int[] X) {
-        int[] ans = new int[N];
-        for (int i = 0 ; i < Q ; i++) {
-            int s = S[i] ;
-            ans[s] += X[i];
-        }
-
-        for (int i = 1 ; i < N ; i++) {
-            ans[i]  = ans[i] + ans[i - 1];
-        }
-        return ans;
-    }
-    public static int[] finalBeggerStateWithEndIndex(int A, int[][]B) {
+public class ContinuousSumQuery {
+    public int[] solve(int A, int[][] B) {
         int q = B.length;
         int[] ans = new int[A];
 
@@ -43,36 +20,12 @@ public class BeggarsOutsideATemple {
             ans[i]  = ans[i] + ans[i - 1];
         }
         return ans;
-
     }
-    public static void main(String[] args) {
-//        int N = 6 ;
-//        int[] S = {2, 4, 0 , 0, 0};
-//        int[] X = {20, 10, 5, -5, 10};
-//        int Q = S.length;
-//        int[] money = finalBeggarState(N, Q, S, X);
-//        int[] money2 = finalBeggarOptimized(N, Q, S, X);
-//        for (int m  : money) {
-//            System.out.print(m + " ");
-//        }
-//        System.out.println();
-//        for (int m  : money2) {
-//            System.out.print(m + " ");
-//        }
 
-        int A = 5 ;
-        int[][] B = {
-                {1, 2, 10},
-                {2, 3, 20},
-                {2, 5, 25}
-        };
-        int[] ans = finalBeggerStateWithEndIndex(A, B);
-        for (int n : ans) {
-            System.out.print(n + " ");
-        }
+    public static void main(String[] args) {
+
     }
 }
-
 /*
 Problem Description
 There are A beggars sitting in a row outside a temple. Each beggar initially has an empty pot. When the devotees come to the temple, they donate some amount of coins to these beggars. Each devotee gives a fixed amount of coin(according to their faith and ability) to some K beggars sitting next to each other.
