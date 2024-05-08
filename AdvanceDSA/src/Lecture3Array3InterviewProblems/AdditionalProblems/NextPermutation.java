@@ -1,8 +1,49 @@
 package Lecture3Array3InterviewProblems.AdditionalProblems;
 
-public class NextPermutation {
-    public static void main(String[] args) {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+public class NextPermutation {
+    public static ArrayList<Integer> nextPermutation(ArrayList<Integer> A) {
+        int index = -1 ;
+        int n = A.size();
+        if (n == 1) return A ;
+        for (int i = n - 2 ; i >= 0 ; i--) {
+            if ((A.get(i) < A.get(i + 1))) {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            Collections.reverse(A);
+            return A;
+        }
+
+        for (int i = n - 1 ; i > index ; i--) {
+            if (A.get(i) > A.get(index)) {
+                int temp = A.get(index);
+                A.set(index, A.get(i));
+                A.set(i, temp);
+                break;
+            }
+        }
+
+        List<Integer> sublist = A.subList(index + 1, n);
+        Collections.reverse(sublist);
+        return A;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> A = new ArrayList<>() ;
+        A.add(2);
+        A.add(1);
+        A.add(5);
+        A.add(4);
+        A.add(3);
+        A.add(0);
+        A.add(0);
+        A = nextPermutation(A);
+        System.out.println(A);
     }
 }
 /*

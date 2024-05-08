@@ -1,8 +1,24 @@
 package Lecture3Array3InterviewProblems.AdditionalProblems;
 
 public class NumberOfDigitOne {
+    public static int numberOfOnes(int A) {
+        int ans = 0 ;
+        int i = 1 ;
+        while (i <= A) {
+            ans += ( (A / (i * 10)) * i ) + Math.min( Math.max( (A % (i * 10)) - (i - 1), 0), i );
+            i *= 10;
+        }
+        return ans;
+    }
     public static void main(String[] args) {
-
+        int A = 1;
+        int B = 10;
+        int C = 111;
+        int D = 11;
+        System.out.println(numberOfOnes(A));
+        System.out.println(numberOfOnes(B));
+        System.out.println(numberOfOnes(C));
+        System.out.println(numberOfOnes(D));
     }
 }
 /*
