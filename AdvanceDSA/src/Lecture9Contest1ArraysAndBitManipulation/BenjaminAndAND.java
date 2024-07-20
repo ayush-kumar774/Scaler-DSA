@@ -37,18 +37,18 @@ public class BenjaminAndAND {
 
 
     public static void main(String[] args) {
-        int[] A = {28, 7, 3, 6, 23, 16, 5, 29, 23};
-        int[] Q = {5, 0, 1};  // Queries
+        int[] A = {2, 5, 6, 7};
+        int[] Q = {1, 2};  // Queries
         int[] result = countPairsWithBitSet(A, Q);
         System.out.println("Count of pairs for each query:");
         for (int i = 0; i < result.length; i++) {
             System.out.println("Query " + Q[i] + ": " + result[i]);
         }
-        int x = 21;
-        x = x << 1;
-        x = x >> 2;
-        x = x << 1;
-        System.out.println(x);
+//        int x = 21;
+//        x = x << 1;
+//        x = x >> 2;
+//        x = x << 1;
+//        System.out.println(x);
 
     }
 }
