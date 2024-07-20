@@ -1,4 +1,4 @@
-package Lecture13OOPS.AdditionalProblems;
+package Lecture13OOPS.Assignment;
 
 class Student {
     int age;
@@ -20,21 +20,12 @@ public class Client {
         s1.name = "A";
 
         Student s2 = new Student();
-        s2.age = 20;
-        s2.name = "B";
 
-        swap(s1, s2);
-
-        s1.display();
-    }
-
-    private static void swap(Student s1, Student s2) {
-        int tage = s1.age;
+        int tempAge = s1.age;
         s1.age = s2.age;
-        s2.age = tage;
+        s2.age = tempAge;
 
-        String tname = s1.name;
-        s1.name = s2.name;
-        s2.name = tname;
+        s2.display();
+
     }
 }

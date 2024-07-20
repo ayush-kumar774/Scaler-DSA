@@ -1,2 +1,4 @@
-package Lecture10Maths1ModularArithmeticAndGCD.Assignment;public class ModSum {
+package Lecture10Maths1ModularArithmeticAndGCD.Assignment;
+
+public class ModSum {
 }

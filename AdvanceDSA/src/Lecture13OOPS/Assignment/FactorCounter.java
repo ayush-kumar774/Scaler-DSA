@@ -1,31 +1,82 @@
 package Lecture13OOPS.Assignment;
 
-import java.util.Arrays;
+
+import Lecture5BitManipulation2.TwoNumberWithOneOccurrence;
 
 public class FactorCounter {
 
-    // Method to count factors for each number up to maxValue
-    private static int[] countFactors(int maxValue) {
-        // Initialize an array to store the number of factors for each number
-        int[] factorCounts = new int[maxValue + 1];
+    public static int countFactors(int n) {
+        int count = 0;
+        int sqrt = (int) Math.sqrt(n);
 
-        // Iterate through each integer and update its multiples
-        for (int i = 1; i <= maxValue; i++) {
-            for (int j = i; j <= maxValue; j += i) {
-                factorCounts[j]++;
+        for (int i = 1; i <= sqrt; i++) {
+            if (n % i == 0) {
+                if (i == n / i) {
+                    count++;
+                } else {
+                    count += 2;
+                }
             }
         }
 
-        return factorCounts;
+        return count;
     }
 
-    public static void main(String[] args) {
-        int maxValue = 20; // Example maximum value
-        int[] factorCounts = countFactors(maxValue);
+    public static int[] prefixSum(int[] A) {
+        int[] prefixSum = new int[A.length];
 
-        // Print the number of factors for each number up to maxValue
-        for (int i = 1; i <= maxValue; i++) {
-            System.out.println("Number of factors of " + i + " is " + factorCounts[i]);
+        for (int i = 0 ; i < A.length ; i++) {
+            prefixSum[i] = countFactors(A[i]) >= 3 ? 1  : 0;
+        }
+        return prefixSum;
+    }
+
+    public static int[] solve (int[] A, int[][] B) {
+        int n = A.length;
+
+        int[] prefixSum = prefixSum(A);
+        for (int i = 1 ; i < n ; i++) {
+            prefixSum[i] += prefixSum[i - 1] ;
+        }
+
+        int[] result = new int[B.length];
+
+        for (int i = 0 ; i < B.length ; i++) {
+            int L = B[i][0];
+            int R = B[i][1];
+            if (L - 1 == 0) {
+                result[i] = prefixSum[R - 1];
+            }
+            else {
+                result[i] = prefixSum[R - 1] - prefixSum[L - 2];
+            }
+        }
+
+        return result;
+    }
+    public static void main(String[] args) {
+       int[] A1 = {1, 8, 12, 15, 5};
+       int[][] Q1 = {
+               {1, 3},
+               {2, 5},
+               {4, 4}
+       };
+
+       int[] A2 = {11, 8, 2, 7, 15};
+       int[][] Q2 = {
+               {2, 3},
+               {1, 5},
+               {3, 4}
+       };
+
+       int[] result1 = solve(A1, Q1);
+       int[] result2 = solve(A2, Q2);
+
+       System.out.println("Result for 1 ");
+       TwoNumberWithOneOccurrence.print(result1);
+       System.out.println("Result for 2 ");
+        for (int res : result2) {
+            System.out.print(res + " ");
         }
     }
 }
