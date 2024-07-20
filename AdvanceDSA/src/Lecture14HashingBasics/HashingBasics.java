@@ -30,7 +30,7 @@ public class HashingBasics {
         System.out.println(numberWithLessFrequency(learners));
     }
 
-    public static int[] findFrequency(int[] A, int[] Q) {
+    private static int[] findFrequency(int[] A, int[] Q) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         for (int a : A) {
@@ -51,7 +51,7 @@ public class HashingBasics {
         return frequency;
     }
 
-    public static int firstNonRepeatingElement(int[] A) {
+    private static int firstNonRepeatingElement(int[] A) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int a : A) {
             hashMap.put(a, hashMap.getOrDefault(a, 0) + 1);
@@ -73,7 +73,7 @@ public class HashingBasics {
         return prefixSum;
     }
 
-    public static boolean checkSubArrayWithSumZero(int[] A) {
+    private static boolean checkSubArrayWithSumZero(int[] A) {
         int[] prefixSum = prefixSum(A);
 
         HashSet<Integer> hashSet = new HashSet<>();
@@ -90,7 +90,7 @@ public class HashingBasics {
         return false;
     }
 
-    public static int numberWithLessFrequency(int[] A) {
+    private static int numberWithLessFrequency(int[] A) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         for (int a : A) {
