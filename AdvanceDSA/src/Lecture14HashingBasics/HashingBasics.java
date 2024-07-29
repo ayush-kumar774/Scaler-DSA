@@ -64,7 +64,7 @@ public class HashingBasics {
         return -1;
     }
 
-    private static int[] prefixSum(int[] A) {
+    public static int[] prefixSum(int[] A) {
         int[] prefixSum = new int[A.length];
         prefixSum[0] = A[0];
         for (int i = 1; i < A.length; i++) {
