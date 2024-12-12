@@ -1,6 +1,6 @@
 package Lecture20BinarySearchOnAnswer;
 
-import java.io.PrintWriter;
+
 import java.util.Arrays;
 
 public class BinarySearchOnAnswer {
@@ -14,8 +14,10 @@ public class BinarySearchOnAnswer {
         int T2 = 1;
         int P2 = 3;
 
+        int[] A1 = {3, 5, 1, 7, 6, 9, 1, 5};
         System.out.println(painterPartitionPossibleOrNot(A, X1, T1, P1));
         System.out.println(painterPartitionPossibleOrNot(A, X2, T2, P2));
+        System.out.println(minNumberOfPainter(A1, 9));
 
         System.out.println(minTimeToPaintAllTheBoards(A, T1, 2));
 
@@ -89,6 +91,21 @@ public class BinarySearchOnAnswer {
         }
 
         return ans;
+    }
+
+    private static int minNumberOfPainter(int[] A, int T) {
+        int painters = 1;
+        int work = 0 ;
+        for (int i = 0 ; i < A.length; i++) {
+            if (work + A[i] > T) {
+                painters++;
+                work = A[i];
+            }
+            else {
+                work += A[i];
+            }
+        }
+        return painters;
     }
 
     private static int aggressiveCows(int[] shed, int cows) {
